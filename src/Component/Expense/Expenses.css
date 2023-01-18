@@ -1,0 +1,35 @@
+.rowOfExp{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(85, 83, 83);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.date{
+    width: 5em;
+    border-radius: 10px;
+    background-color: black;
+    border: 1px double #fff;
+    word-wrap: break-word;
+    padding: 10px;
+    text-align: center;
+    padding-top: 15px;
+}
+.Amt{
+    border: 1px solid #fff;
+    background-color: rgb(119, 5, 119);
+    padding: 10px;
+    border-radius: 10px;
+    width: 6em;
+    text-align: center;
+}
+.topRow{
+    display: flex;
+    justify-content: space-between;
+}
+.filter select{
+    width: 10rem;
+    padding: 10px;
+    border-radius: 10px;
+}
