@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
 import './NewExpense.css';
 function NewExpense(props) {
-	// const [title, setTitle] = useState('')
+	// const [Title, setTitle] = useState('')
+	// const [Date, setDate] = useState('')
+	// const [Amt, setAmt] = useState('')
 
 	// const changeTitle = (e) =>{
 	//   console.log(e.target.value)
 	//   setTitle(e.target.value)
 	// }
 
-	const [userInput, setUserInput] = useState({
-		inputtedTitle: 'akhil',
-		inputtedDate: '22',
-		inputtedAmt: '2000',
-	});
+	const [userInput, setUserInput] = useState({inputtedTitle: 'LCC',inputtedDate: '22',inputtedAmt: '2000'});
 
-	const changeTitle = e => {
-		setUserInput(previousState => {
+	const changeTitle = (e) => {
+		setUserInput((previousState) => {
 			return { ...previousState, inputtedTitle: e.target.value   };
 		});
 	};

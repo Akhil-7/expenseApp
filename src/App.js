@@ -45,19 +45,21 @@ function App() {
 	// 	});
 	// };
 
-  const valueFromForm = formData => {
-    setData(
-      (preData)=>{
-        return[formData, ...preData]
-      }
-    );
-  }
+	const valueFromForm = formData => {
+		setData(preData => {
+			return [formData, ...preData];
+		});
+	};
 
 	const [filteredYear, setFilteredYear] = useState('2022');
 
 	const filterYearHandeler = getYear => {
 		setFilteredYear(getYear);
 	};
+
+	// const filteredExp = datas.filter(data => {
+	// 	return new Date(data.date).getFullYear().toString() === filteredYear;
+	// });
 
 	const filteredExp = datas.filter(data => {
 		return new Date(data.date).getFullYear().toString() === filteredYear;
@@ -70,7 +72,7 @@ function App() {
 			</div>
 			<div className="Expenses">
 				<TopRow selectedYear={filteredYear} getYear={filterYearHandeler} />
-				{filteredExp.length === 0 ? (
+				      {filteredExp.length === 0 ? (
 					<h1 className="no-data"> No Data</h1>
 				) : (
 					filteredExp.map(obj => {
